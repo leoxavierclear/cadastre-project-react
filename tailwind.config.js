@@ -10,7 +10,7 @@ module.exports = {
       /^from-/,
     ]
   },
-  
+  darkMode: false,
   theme: {
     extend: {},
   },

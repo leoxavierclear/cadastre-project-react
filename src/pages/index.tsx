@@ -1,14 +1,15 @@
 import Cliente from "../../core/Cliente";
 import Botao from "../components/Botao";
+import Formulario from "../components/Formulario";
 import Layout from "../components/Layout";
 import Tabela from "../components/Tabela";
 
 const clientes = [ 
   new Cliente ('Ana', 32, '1'),
-  new Cliente ('Bia', 65, '1'),
-  new Cliente ('Paula', 53, '1'),
-  new Cliente ('Pedro', 33, '1'),
-  new Cliente ('João', 13, '1')
+  new Cliente ('Bia', 65, '2'),
+  new Cliente ('Paula', 53, '3'),
+  new Cliente ('Pedro', 33, '4'),
+  new Cliente ('João', 13, '5')
 ]
 
 function clienteSelecionado(cliente : Cliente){
@@ -32,10 +33,12 @@ export default function Home() {
           <Botao cor="green" className="mb-4">Novo Cliente</Botao>
         </div>
         
-        <Tabela clientes={clientes} 
+        {/* <Tabela clientes={clientes} 
           clienteSelecionado={clienteSelecionado}
           clienteExcluido={clienteExcluido}
-        />
+        /> */}
+
+        <Formulario cliente={clientes[3]}></Formulario>
       </Layout>
     </div>
   )
